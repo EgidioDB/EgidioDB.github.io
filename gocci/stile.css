@@ -1,0 +1,121 @@
+/* Le pagine pubbliche di Gocci (supporto, privacy, condizioni d'uso): i colori della
+   casetta, i titoli nel carattere di Gocci, il testo lungo in quello di sistema. */
+
+@font-face {
+  font-family: "Gocci";
+  src: url("Gocci-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gocci";
+  src: url("Gocci-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+:root {
+  --bg: #121c3a;
+  --card: #1d2851;
+  --edge: #2d3b6e;
+  --ink: #eef1ff;
+  --muted: #a3aed6;
+  --accent: #6aa8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+header img {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  image-rendering: pixelated;
+}
+
+h1,
+h2,
+nav {
+  font-family: "Gocci", -apple-system, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 32px 0 8px;
+  font-size: 22px;
+}
+
+p,
+li {
+  color: var(--ink);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+a {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+nav a {
+  padding: 8px 14px;
+  background: var(--card);
+  border: 2px solid var(--edge);
+  border-radius: 6px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.card {
+  padding: 16px 20px;
+  background: var(--card);
+  border: 2px solid var(--edge);
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 14px;
+}
